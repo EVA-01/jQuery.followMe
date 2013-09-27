@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Follow Me</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.followme.min.js"></script>
+<style>
+img {
+ max-width:100px;
+}
+#lore {
+ width:100px;
+ height:133px;
+ background:#cc0055;
+ color:#87eff0;
+ text-align:center;
+}
+</style>
+<script>
+$(document).ready(function() {
+ colo=$('#colo').followMe({align:'right top', distance:'-5 5'});
+ kana=$('#kana').followMe({align:'right bottom', distance:'-5 -5'});
+ quix=$('#quix').followMe({align:'left bottom', distance:'5 -5'});
+ lore=$('#lore').followMe({align:'left top', distance:'5 5'});
+});
+</script>
+</head>
+<body>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Great_Wave_off_Kanagawa2.jpg/640px-Great_Wave_off_Kanagawa2.jpg" id="kana" class="artwork"><br>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/El_coloso.jpg/696px-El_coloso.jpg" id="colo" class="artwork"><br>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Honor%C3%A9_Daumier_017_%28Don_Quixote%29.jpg/533px-Honor%C3%A9_Daumier_017_%28Don_Quixote%29.jpg" id="quix" class="artwork"><br>
+<div id="lore" class="artwork">
+Lorem ipsum!
+</div>
+</body>
+</html>
