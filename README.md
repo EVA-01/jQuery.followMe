@@ -19,9 +19,13 @@ Make elements follow the cursor.
 
     follow.stop();
     follow.start();
+    $('#element').removeAttr('followMe');
+    $('#element').attr('followMe', '');
 
-* **stop()** - Stops following the cursor.
-* **start()** - Starts following the cursor again.
+* **stop()** - Stops all elements initialized under the root variable from following the cursor.
+* **start()** - Starts all elements initialized under the root variable again.
+* For individual stops: remove the attribute "followMe".
+* For individual starts (element must have been initalized to work): add the attribute "followMe".
 
 If you need to change the options of the element, you can simple reinitialize as you would under *Initialization examples* above.
 
